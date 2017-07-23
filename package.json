@@ -1,0 +1,22 @@
+{
+  "name": "typescpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrpt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inquisitivequin/typeScpt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inquisitivequin/typeScpt/issues"
+  },
+  "homepage": "https://github.com/inquisitivequin/typeScpt#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
