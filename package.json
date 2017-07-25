@@ -19,5 +19,8 @@
   "homepage": "https://github.com/inquisitivequin/typeScpt#readme",
   "devDependencies": {
     "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6"
   }
 }
