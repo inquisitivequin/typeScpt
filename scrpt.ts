@@ -40,4 +40,12 @@ let mo;
 
 mo = returnMe
 
-console.log(mo(10,10))
+
+//objs
+
+let ustr: { name: string, age: number } = {
+	name: 'Poat',
+	age: 1324
+}
+
+console.log(ustr)

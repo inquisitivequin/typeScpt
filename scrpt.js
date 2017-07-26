@@ -23,4 +23,8 @@ function muli(val2, val1) {
 console.log(muli(12, 12));
 var mo;
 mo = returnMe;
-console.log(mo(10, 10));
+var ustr = {
+    name: 'Poat',
+    age: 1324
+};
+console.log(ustr);
