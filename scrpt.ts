@@ -44,5 +44,32 @@ console.log(pup)
 
 pup.setColor('blue')
 
-
 console.log(pup)
+
+//Get & Set
+
+class Plant {
+	private _species: string = 'plant'
+
+	get species() {
+		return this._species
+	}
+
+	set species(val: string) {
+		if (val.length > 3) {
+			this._species = val
+		} else {
+			this._species = "potato"
+		}
+	}
+
+	
+	
+}
+
+let plt = new Plant()
+console.log(plt.species)
+plt.species = 'qw'
+console.log(plt.species)
+plt.species = 'shrub'
+console.log(plt.species)

@@ -43,4 +43,31 @@ var pup = new Puppy('Jerd');
 console.log(pup);
 pup.setColor('blue');
 console.log(pup);
+var Plant = (function () {
+    function Plant() {
+        this._species = 'plant';
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (val) {
+            if (val.length > 3) {
+                this._species = val;
+            }
+            else {
+                this._species = "potato";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plt = new Plant();
+console.log(plt.species);
+plt.species = 'qw';
+console.log(plt.species);
+plt.species = 'shrub';
+console.log(plt.species);
 //# sourceMappingURL=scrpt.js.map
