@@ -70,4 +70,15 @@ plt.species = 'qw';
 console.log(plt.species);
 plt.species = 'shrub';
 console.log(plt.species);
+var Helpers = (function () {
+    function Helpers() {
+    }
+    Helpers.calcCrcnf = function (dia) {
+        return this.PI * dia;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCrcnf(12));
 //# sourceMappingURL=scrpt.js.map

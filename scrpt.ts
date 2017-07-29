@@ -73,3 +73,14 @@ plt.species = 'qw'
 console.log(plt.species)
 plt.species = 'shrub'
 console.log(plt.species)
+
+//Statics
+class Helpers {
+	static PI: number = 3.14;
+	static calcCrcnf(dia: number) {
+		return this.PI * dia
+	}
+}
+
+console.log(2 * Helpers.PI)
+console.log(Helpers.calcCrcnf(12))
