@@ -81,4 +81,27 @@ var Helpers = (function () {
 }());
 console.log(2 * Helpers.PI);
 console.log(Helpers.calcCrcnf(12));
+var Proj = (function () {
+    function Proj() {
+        this.projName = "Project 1";
+    }
+    Proj.prototype.calcBudg = function () {
+        return this.budget * 2;
+    };
+    return Proj;
+}());
+var ITProj = (function (_super) {
+    __extends(ITProj, _super);
+    function ITProj() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProj.prototype.changeName = function (name) {
+        this.projName = name;
+    };
+    return ITProj;
+}(Proj));
+var prj1 = new ITProj();
+console.log(prj1);
+prj1.changeName('Super Project');
+console.log(prj1);
 //# sourceMappingURL=scrpt.js.map

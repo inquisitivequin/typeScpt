@@ -84,3 +84,30 @@ class Helpers {
 
 console.log(2 * Helpers.PI)
 console.log(Helpers.calcCrcnf(12))
+
+//Abstract
+
+abstract class Proj {
+	projName: string = "Project 1",
+	budget: number
+
+	abstract changeName(name: string): void
+
+	calcBudg(){
+		return this.budget * 2
+	}
+}
+
+class ITProj extends Proj {
+	changeName(name: string) {
+		this.projName = name
+	}
+}
+
+let prj1 = new ITProj()
+
+console.log(prj1)
+
+prj1.changeName('Super Project')
+
+console.log(prj1)
