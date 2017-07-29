@@ -24,3 +24,25 @@ const poat = new Person('Shea', 'Poat')
 console.log(poat.name, poat.usrname)
 poat.getColor()
 poat.setType('Puppy')
+
+//Inheritance
+
+class Puppy extends Person {
+
+	constructor(usrName: string) {
+		super('Lry', usrName)
+	}
+    setColor(color: string) {
+    	this.color = color
+    	console.log(this.color)
+    }
+}
+
+let pup = new Puppy('Jerd')
+
+console.log(pup)
+
+pup.setColor('blue')
+
+
+console.log(pup)
