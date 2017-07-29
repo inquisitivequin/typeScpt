@@ -8,8 +8,7 @@ let double = (val: number) => val * 2
 console.log(double(10));
  
 // Exercise 2 - If only we could provide some default values...
-var greet = function (name: string = 'shea') {
-    if (name === undefined) {}
+var greet = function (name: string = 'Shea') {
     console.log("Hello, " + name);
 };
 greet();
@@ -19,11 +18,13 @@ greet("Anna");
 var numbers = [-3, 33, 38, 5];
 //console.log(Math.min.apply(Math, numbers));
  
-console.log(...numbers)
+console.log(Math.min(...numbers))
 
 // Exercise 4 - I have to think about Exercise 3 ...
-var newArray = [55, 20, ...numbers];
+var newArray = [55, 20];
 // Array.prototype.push.apply(newArray, numbers);
+newArray.push(...numbers)
+
 console.log(newArray);
 
 
@@ -35,9 +36,9 @@ var testResults = [3.89, 2.99, 1.38];
 // var result3 = testResults[2];
 // console.log(result1, result2, result3);
 
-let [] = testResults
+let [r1, r2, r3] = testResults
 
-console.log(...testResults)
+console.log(r1, r2, r3 )
  
 // Exercise 6 - And a well-constructed object!
 var scientist = {firstName: "Will", experience: 12};
