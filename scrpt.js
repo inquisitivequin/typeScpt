@@ -104,4 +104,81 @@ var prj1 = new ITProj();
 console.log(prj1);
 prj1.changeName('Super Project');
 console.log(prj1);
+var Car = (function () {
+    function Car(name) {
+        this.acceleration = 0;
+        this.name = name;
+    }
+    Car.prototype.honk = function () {
+        console.log('Toooooooot!');
+    };
+    Car.prototype.accelerate = function (speed) {
+        this.acceleration =
+            this.acceleration + speed;
+    };
+    return Car;
+}());
+var car = new Car('Audi');
+car.honk();
+console.log(car.acceleration);
+car.accelerate(320);
+console.log(car.acceleration);
+var baseObject = (function () {
+    function baseObject() {
+        this.width = 0;
+        this.length = 0;
+    }
+    baseObject.prototype.setWidth = function (num) {
+        this.width = num;
+    };
+    baseObject.prototype.setLength = function (num) {
+        this.length = num;
+    };
+    return baseObject;
+}());
+var Rectangle = (function (_super) {
+    __extends(Rectangle, _super);
+    function Rectangle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Rectangle.prototype.calcSize = function () {
+        return this.width * this.length;
+    };
+    return Rectangle;
+}(baseObject));
+var rect = new Rectangle;
+rect.setWidth(5);
+rect.setLength(2);
+console.log(rect.calcSize());
+var Pers = (function (_super) {
+    __extends(Pers, _super);
+    function Pers() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._firstName = "";
+        return _this;
+    }
+    Object.defineProperty(Pers.prototype, "firstName", {
+        get: function () {
+            return this._firstName;
+        },
+        set: function (name) {
+            if (name.length > 3) {
+                this._firstName = name;
+            }
+            else {
+                this._firstName = "";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Pers;
+}(Person));
+var poj = new Pers('ryan', 'dwon');
+console.log(poj.firstName);
+poj.firstName = "te";
+console.log(poj.firstName);
+poj.firstName = 'RyanDwon';
+console.log(poj.firstName);
+console.log(poj.usrname);
 //# sourceMappingURL=scrpt.js.map

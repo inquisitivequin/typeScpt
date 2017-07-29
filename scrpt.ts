@@ -111,3 +111,78 @@ console.log(prj1)
 prj1.changeName('Super Project')
 
 console.log(prj1)
+
+//exercises
+
+class Car {
+	name: string
+	acceleration: number = 0
+
+	constructor(name: string) {
+		this.name = name
+	}
+
+	honk() {
+		console.log('Toooooooot!')
+	}
+
+	accelerate(speed: number) {
+		this.acceleration = 
+		this.acceleration + speed
+	}
+}
+
+let car = new Car('Audi')
+car.honk()
+console.log(car.acceleration)
+car.accelerate(320)
+console.log(car.acceleration)
+
+class baseObject {
+	width: number = 0
+	length: number = 0
+
+	setWidth(num: number) {
+		this.width = num
+	}
+
+	setLength(num: number) {
+		this.length = num
+	}
+}
+
+class Rectangle extends baseObject {
+	calcSize() {
+		return this.width * this.length
+	}
+}
+
+let rect = new Rectangle
+rect.setWidth(5)
+rect.setLength(2)
+console.log(rect.calcSize())
+
+class Pers extends Person {
+	private _firstName: string = ""
+
+	get firstName () {
+		return this._firstName
+	}
+
+	set firstName(name: string) {
+		if (name.length > 3) {
+			this._firstName = name
+		} else {
+			this._firstName = ""
+		}
+	}
+}
+
+let poj = new Pers('ryan', 'dwon')
+
+console.log(poj.firstName)
+poj.firstName = "te"
+console.log(poj.firstName)
+poj.firstName = 'RyanDwon'
+console.log(poj.firstName)
+console.log(poj.usrname)
