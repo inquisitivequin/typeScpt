@@ -1,7 +1,7 @@
-
-
-const PI = 43
+import {PI} from './circ'
+import {calcCirc} from './circ'
+import {calcRect} from './rect'
 
 console.log(PI)
-console.log(Moth.calcRect(10,10))
-console.log(Moth.calcCirc(23))
+console.log(calcCirc(34))
+console.log(calcRect(12,12))

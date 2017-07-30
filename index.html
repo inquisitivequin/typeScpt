@@ -3,9 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="node_modules/systemjs/dist/system.js"></script>
 </head>
 <body>
 	<h1>Printed in Japan</h1>
 </body>
-<script type="text/javascript" src="./scrpt.js"></script>
+
+<script>
+  SystemJS.config({
+  baseURL: '/',
+  packages: {
+  	'/': {
+  		defaultExtension: 'js'
+  	}
+  }
+});
+
+System.import('scrpt.js');
+</script>
 </html>
