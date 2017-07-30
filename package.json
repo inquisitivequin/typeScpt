@@ -5,7 +5,8 @@
   "main": "scrpt.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server -q"
+    "start": "lite-server -q",
+    "tscd": "tsc -w --outFile scrpt.js circ.ts rect.ts scrpt.ts"
   },
   "repository": {
     "type": "git",
