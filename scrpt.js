@@ -6,9 +6,14 @@ function upName(person) {
 }
 var pers = {
     firstName: 'shea',
-    age: 23
+    age: 23,
+    hols: function (lastName) {
+        console.log("Hols " + this.firstName + ' ' + lastName);
+    }
 };
-greet({ firstName: 'jerd', age: 34 });
 upName(pers);
 greet(pers);
+pers.hols('burd');
+pers.word = 'word';
+console.log(pers.word);
 //# sourceMappingURL=scrpt.js.map
