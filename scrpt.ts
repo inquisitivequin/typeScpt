@@ -27,3 +27,17 @@ greet(pers)
 pers.hols('burd')
 pers.word = 'word'
 console.log(pers.word)
+
+//Function Types
+
+interface DoubFunc {
+	(num1: number, num2: number): number
+}
+
+let myDoubFunc: DoubFunc
+
+myDoubFunc = function(val1: number, val2: number) {
+	return val1 * val2
+}
+
+console.log(myDoubFunc(234,54))

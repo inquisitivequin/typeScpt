@@ -16,4 +16,9 @@ greet(pers);
 pers.hols('burd');
 pers.word = 'word';
 console.log(pers.word);
+var myDoubFunc;
+myDoubFunc = function (val1, val2) {
+    return val1 * val2;
+};
+console.log(myDoubFunc(234, 54));
 //# sourceMappingURL=scrpt.js.map
