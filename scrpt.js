@@ -1,24 +1,14 @@
-function greet(person) {
-    console.log("Hola, " + person.firstName);
+function exho(data) {
+    return data;
 }
-function upName(person) {
-    person.firstName = "poat";
+console.log(exho('potato').length);
+console.log(exho('poat'));
+console.log(exho({ name: string = "shea" }));
+function bexo(dat) {
+    return dat;
 }
-var pers = {
-    firstName: 'shea',
-    age: 23,
-    hols: function (lastName) {
-        console.log("Hols " + this.firstName + ' ' + lastName);
-    }
-};
-upName(pers);
-greet(pers);
-pers.hols('burd');
-pers.word = 'word';
-console.log(pers.word);
-var myDoubFunc;
-myDoubFunc = function (val1, val2) {
-    return val1 * val2;
-};
-console.log(myDoubFunc(234, 54));
+console.log(bexo('potato').length);
+console.log(bexo(231));
+console.log(bexo({ name: "shea" }));
+var turs = [1.234, 345.34, 53425.4323];
 //# sourceMappingURL=scrpt.js.map

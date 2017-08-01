@@ -1,43 +1,21 @@
-interface NamePers {
-	firstName: string
-	age?: number
-	[porp: string]: any
-	hols(lastName: string): void
+function exho(data: any) {
+	return data
 }
 
-function greet(person: NamePers) {
-	console.log("Hola, " + person.firstName)
+console.log(exho('potato').length)
+console.log(exho('poat'))
+console.log(exho({name: string = "shea"}))
+
+//BetGen
+
+function bexo<T>(dat: T) {
+	return dat
 }
 
-function upName(person: NamePers) {
-	person.firstName = "poat"
-}
+console.log(bexo('potato').length)
+console.log(bexo<number>(231))
+console.log(bexo({name: "shea"}))
 
-const pers: NamePers = {
-	firstName: 'shea',
-	age: 23,
-	hols(lastName: string) {
-		console.log("Hols " + this.firstName + ' ' + lastName)
-	}
-}
+//Built in Gens
 
-//greet({firstName: 'jerd', age: 34})
-upName(pers)
-greet(pers)
-pers.hols('burd')
-pers.word = 'word'
-console.log(pers.word)
-
-//Function Types
-
-interface DoubFunc {
-	(num1: number, num2: number): number
-}
-
-let myDoubFunc: DoubFunc
-
-myDoubFunc = function(val1: number, val2: number) {
-	return val1 * val2
-}
-
-console.log(myDoubFunc(234,54))
+const turs: Array<number> = [1.234, 345.34, 53425.4323]
