@@ -19,3 +19,29 @@ console.log(bexo({name: "shea"}))
 //Built in Gens
 
 const turs: Array<number> = [1.234, 345.34, 53425.4323]
+
+//Arrays
+function printAl<T>(arg: T[]) {
+	arg.forEach((el) => console.log(el))
+}
+
+printAl(['pota', 'poat', 'poatot'])
+
+const exo: <T>(dat: T) => T = bexo
+
+console.log(exo<string>('frato'))
+
+class SimMat<T extends number> {
+	baseVal: T
+	multVal: T
+
+	calc(): number {
+		return +this.baseVal * +this.multVal
+	}
+}
+
+const simM = new SimMat<number>()
+simM.baseVal = 23
+simM.multVal = 32923
+console.log(simM.calc())
+
