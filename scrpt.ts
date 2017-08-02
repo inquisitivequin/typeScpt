@@ -47,7 +47,18 @@ function ed(val: boolean) {
 	}
 }
 
+
+function oved(val: boolean) {
+	return function(targ: any, propNom: string) {
+		const newDes: PropertyDescriptor = {
+			writable: val
+		}
+		return newDes
+	}
+}
+
 class Proj {
+	@oved(false)
 	projNam: string
 
 	constructor(name: string) {
@@ -67,3 +78,33 @@ prj.calcBud = function() {
 	console.log(2349234)
 }
 prj.calcBud()
+console.log(prj)
+
+
+//paramDec
+
+function printInd(targ: any, meth: string, param: number) {
+	console.log('Targ', targ)
+	console.log('Meth', meth)
+	console.log('Param', param)
+}
+
+class Puppy{
+	name: string
+
+	constructor(name: string) {
+		this.name
+	}
+
+	printPup(mode: string, @printInd printYall: boolean) {
+		if (printYall) {
+			console.log('Shea')
+		} else {
+			console.log('Dap')
+		}
+	}
+}
+
+const pups = new Puppy()
+
+pups.printPup("pota", true)
