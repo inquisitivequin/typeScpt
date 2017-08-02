@@ -1,32 +1,20 @@
-function exho(data) {
-    return data;
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+function word(cons) {
+    if (cons === void 0) { cons = function () { }; }
+    console.log(cons);
 }
-console.log(exho('potato').length);
-console.log(exho('poat'));
-console.log(exho({ name: string = "shea" }));
-function bexo(dat) {
-    return dat;
-}
-console.log(bexo('potato').length);
-console.log(bexo(231));
-console.log(bexo({ name: "shea" }));
-var turs = [1.234, 345.34, 53425.4323];
-function printAl(arg) {
-    arg.forEach(function (el) { return console.log(el); });
-}
-printAl(['pota', 'poat', 'poatot']);
-var exo = bexo;
-console.log(exo('frato'));
-var SimMat = (function () {
-    function SimMat() {
+var Pers = (function () {
+    function Pers() {
+        console.log('Hola');
     }
-    SimMat.prototype.calc = function () {
-        return +this.baseVal * +this.multVal;
-    };
-    return SimMat;
+    Pers = __decorate([
+        word
+    ], Pers);
+    return Pers;
 }());
-var simM = new SimMat();
-simM.baseVal = 23;
-simM.multVal = 32923;
-console.log(simM.calc());
 //# sourceMappingURL=scrpt.js.map
