@@ -32,4 +32,27 @@ var Veg = (function () {
 }());
 var vegr = new Veg();
 vegr.print();
+function ed(val) {
+    return function (targ, propNom, desc) {
+        desc.writable = val;
+    };
+}
+var Proj = (function () {
+    function Proj(name) {
+        this.projNam = name;
+    }
+    Proj.prototype.calcBud = function () {
+        console.log(202020);
+    };
+    __decorate([
+        ed(false)
+    ], Proj.prototype, "calcBud", null);
+    return Proj;
+}());
+var prj = new Proj('Poat');
+prj.calcBud();
+prj.calcBud = function () {
+    console.log(2349234);
+};
+prj.calcBud();
 //# sourceMappingURL=scrpt.js.map
