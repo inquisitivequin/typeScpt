@@ -5,7 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 function word(cons) {
-    if (cons === void 0) { cons = function () { }; }
     console.log(cons);
 }
 var Pers = (function () {
@@ -17,4 +16,20 @@ var Pers = (function () {
     ], Pers);
     return Pers;
 }());
+function printo(cons) {
+    cons.prototype.print = function () {
+        console.log(this);
+    };
+}
+var Veg = (function () {
+    function Veg() {
+        this.name = "Ferny";
+    }
+    Veg = __decorate([
+        printo
+    ], Veg);
+    return Veg;
+}());
+var vegr = new Veg();
+vegr.print();
 //# sourceMappingURL=scrpt.js.map
